@@ -12,12 +12,12 @@ namespace Catalog.API.Data
     {
         public CatalogContext(IConfiguration configuration)
         {
-            var client = new MongoClient(configuration.GetValue<string>("DataBaseSettings:ConnectionString"));
-            var database = client.GetDatabase(configuration.GetValue<string>("DataBaseSettings:DatabaseName"));
+            var client = new MongoClient(configuration.GetValue<string>("DatabaseSettings:ConnectionString"));
+            var database = client.GetDatabase(configuration.GetValue<string>("DatabaseSettings:DatabaseName"));
 
-            Products = database.GetCollection<Product>(configuration.GetValue<string>("DataBaseSettings:CollectionName"));
-            // CatalogContextSeed.SeedData(Products);
+            Products = database.GetCollection<Product>(configuration.GetValue<string>("DatabaseSettings:CollectionName"));
+            CatalogContextSeed.SeedData(Products);
         }
-        public IMongoCollection<Product> Products { get; };
+        public IMongoCollection<Product> Products { get; }
     }
 }

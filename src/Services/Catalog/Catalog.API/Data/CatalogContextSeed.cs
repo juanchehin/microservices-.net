@@ -86,4 +86,3 @@ namespace Catalog.API.Data
         }
     }
 }
-}
