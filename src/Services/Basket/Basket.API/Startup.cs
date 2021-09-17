@@ -1,7 +1,7 @@
-using Basket.API.GrpcServices;
+//using Basket.API.GrpcServices;
 using Basket.API.Repositories;
-using Discount.Grpc.Protos;
-using MassTransit;
+// using Discount.Grpc.Protos;
+// using MassTransit;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -22,6 +22,7 @@ namespace Basket.API
         public IConfiguration Configuration { get; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
+
         public void ConfigureServices(IServiceCollection services)
         {
             
