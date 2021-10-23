@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Ordening.infrastructure
+namespace Ordening.Infrastructure
 {
     public class Class1
     {
