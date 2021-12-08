@@ -1,5 +1,6 @@
 ﻿using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
+using Ordening.Application.Models;
 using Ordering.Application.Contracts.Infrastructure;
 using Ordering.Application.Models;
 using SendGrid;
