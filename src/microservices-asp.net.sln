@@ -35,6 +35,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BuildingBlocks", "BuildingB
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventBus.Messages", "BuildingBlocks\EventBus.Messages\EventBus.Messages.csproj", "{BE57BF98-F2F4-4EB6-8908-D9360582D46A}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{1CEFDF6C-88F1-48E9-B262-359B04ECA8FD}"
+	ProjectSection(SolutionItems) = preProject
+		EventBusConstants.cs = EventBusConstants.cs
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -99,6 +104,7 @@ Global
 		{D8BFE780-01F6-4AD5-8B83-0E3F2A6DCF8B} = {FEC09AF3-6235-485E-ADC4-C8B9B2C1CFB1}
 		{0E7F4C43-AFFF-4722-AC9C-B60C27A966DB} = {FEC09AF3-6235-485E-ADC4-C8B9B2C1CFB1}
 		{BE57BF98-F2F4-4EB6-8908-D9360582D46A} = {ABCE9225-5965-4DE1-8C02-7D86CDDA041C}
+		{1CEFDF6C-88F1-48E9-B262-359B04ECA8FD} = {ABCE9225-5965-4DE1-8C02-7D86CDDA041C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {99070DF5-39B6-44BF-B4D9-B7F5D32284B7}
