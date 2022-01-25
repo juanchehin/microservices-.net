@@ -1,9 +1,9 @@
-﻿// using AutoMapper;
+﻿using AutoMapper;
 using Basket.API.Entities;
 using Basket.API.GrpcServices;
 using Basket.API.Repositories;
-// using EventBus.Messages.Events;
-// using MassTransit;
+using EventBus.Messages.Events;
+using MassTransit;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Net;
@@ -18,14 +18,14 @@ namespace Basket.API.Controllers
         private readonly IBasketRepository _repository;
         private readonly DiscountGrpcService _discountGrpcService;
         // private readonly IPublishEndpoint _publishEndpoint;
-        // private readonly IMapper _mapper;
+        private readonly IMapper _mapper;
 
         public BasketController(IBasketRepository repository, DiscountGrpcService discountGrpcService) //, IPublishEndpoint publishEndpoint, IMapper mapper)
         {
             _repository = repository ?? throw new ArgumentNullException(nameof(repository));
             _discountGrpcService = discountGrpcService ?? throw new ArgumentNullException(nameof(discountGrpcService));
             // _publishEndpoint = publishEndpoint ?? throw new ArgumentNullException(nameof(publishEndpoint));
-            // _mapper = mapper ?? throw new ArgumentNullException(nameof(mapper));
+            _mapper = mapper ?? throw new ArgumentNullException(nameof(mapper));
         }
 
         [HttpGet("{userName}", Name = "GetBasket")]
