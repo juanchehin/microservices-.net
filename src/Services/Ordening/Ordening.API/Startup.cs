@@ -9,7 +9,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
 using Ordening.Application;
-// using Ordering.API.EventBusConsumer;
+using Ordering.API.EventBusConsumer;
 using Ordering.Application;
 using Ordering.Infrastructure;
 using System;
@@ -36,8 +36,16 @@ namespace Ordening.API
 
             // MassTransit-RabbitMQ Configuration
             services.AddMassTransit(config => {
+
+                config.AddConsumer<BasketCheckoutConsumer>();
+
                 config.UsingRabbitMq((ctx, cfg) => {
                     cfg.Host(Configuration["EventBusSettings:HostAddress"]);
+
+                    cfg.ReceiveEndpoint(EventBusConstants.BasketCheckoutQueue, c =>
+                    {
+                        c.ConfigureConsumer<BasketCheckoutConsumer>(ctx);
+                    });
                 });
             });
             services.AddMassTransitHostedService();
