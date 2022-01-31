@@ -4,7 +4,6 @@ using Microsoft.Extensions.Logging;
 using Ordering.API.Extensions;
 using Ordering.Infrastructure.Persistence;
 using Microsoft.Extensions.DependencyInjection;
-using Ordening.API;
 
 namespace Ordering.API
 {

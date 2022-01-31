@@ -1,4 +1,3 @@
-//using EventBus.Messages.Common;
 using MassTransit;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -17,7 +16,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Ordening.API
+namespace Ordering.API
 {
     public class Startup
     {
@@ -42,18 +41,22 @@ namespace Ordening.API
                 config.UsingRabbitMq((ctx, cfg) => {
                     cfg.Host(Configuration["EventBusSettings:HostAddress"]);
 
-                    cfg.ReceiveEndpoint(EventBusConstants.BasketCheckoutQueue, c =>
-                    {
-                        c.ConfigureConsumer<BasketCheckoutConsumer>(ctx);
-                    });
+                    //cfg.ReceiveEndpoint(EventBusConstants.BasketCheckoutQueue, c =>
+                    //{
+                    //    c.ConfigureConsumer<BasketCheckoutConsumer>(ctx);
+                    //});
                 });
             });
             services.AddMassTransitHostedService();
 
+            // General Configuration
+            services.AddAutoMapper(typeof(Startup));
+            services.AddScoped<BasketCheckoutConsumer>();
+
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "Ordening.API", Version = "v1" });
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "Ordering.API", Version = "v1" });
             });
         }
 
@@ -64,7 +67,7 @@ namespace Ordening.API
             {
                 app.UseDeveloperExceptionPage();
                 app.UseSwagger();
-                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "Ordening.API v1"));
+                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "Ordering.API v1"));
             }
 
             app.UseRouting();

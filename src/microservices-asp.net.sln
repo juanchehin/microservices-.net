@@ -23,13 +23,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Discount.Grpc", "Services\D
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Ordering", "Ordering", "{FEC09AF3-6235-485E-ADC4-C8B9B2C1CFB1}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ordering.Domain", "Services\Ordening\Ordering.Domain\Ordering.Domain.csproj", "{1009A2DF-0CD2-48C7-B5A2-68758E970FB1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ordering.Domain", "Services\Ordering\Ordering.Domain\Ordering.Domain.csproj", "{1009A2DF-0CD2-48C7-B5A2-68758E970FB1}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ordering.Infrastructure", "Services\Ordening\Ordening.Infrastructure\Ordering.Infrastructure.csproj", "{9825AD47-9497-43CE-A18C-599842631CC4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ordering.Infrastructure", "Services\Ordering\Ordering.Infrastructure\Ordering.Infrastructure.csproj", "{9825AD47-9497-43CE-A18C-599842631CC4}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ordering.API", "Services\Ordening\Ordening.API\Ordering.API.csproj", "{D8BFE780-01F6-4AD5-8B83-0E3F2A6DCF8B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ordering.API", "Services\Ordering\Ordering.API\Ordering.API.csproj", "{D8BFE780-01F6-4AD5-8B83-0E3F2A6DCF8B}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ordering.Application", "Services\Ordening\Ordening.Application\Ordering.Application.csproj", "{0E7F4C43-AFFF-4722-AC9C-B60C27A966DB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ordering.Application", "Services\Ordering\Ordering.Application\Ordering.Application.csproj", "{0E7F4C43-AFFF-4722-AC9C-B60C27A966DB}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BuildingBlocks", "BuildingBlocks", "{ABCE9225-5965-4DE1-8C02-7D86CDDA041C}"
 EndProject
@@ -44,7 +44,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ApiGateways", "ApiGateways"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OcelotApiGw", "ApiGateways\OcelotApiGw\OcelotApiGw.csproj", "{AFCBEC09-E309-4E5A-B4B1-821E86C2D35E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shopping.Aggregator", "ApiGateways\Shopping.Aggregator\Shopping.Aggregator\Shopping.Aggregator.csproj", "{CC1826B9-5657-4205-804D-4794D6B5E886}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shopping.Aggregator", "ApiGateways\Shopping.Aggregator\Shopping.Aggregator\Shopping.Aggregator.csproj", "{CC1826B9-5657-4205-804D-4794D6B5E886}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
