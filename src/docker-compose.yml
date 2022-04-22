@@ -48,7 +48,7 @@ services:
     image: ${DOCKER_REGISTRY-}orderingapi
     build:
       context: .
-      dockerfile: Services/Ordening/Ordening.API/Dockerfile
+      dockerfile: Services/Ordering/Ordering.API/Dockerfile
 
   ocelotapigw:
     image: ${DOCKER_REGISTRY-}ocelotapigw
