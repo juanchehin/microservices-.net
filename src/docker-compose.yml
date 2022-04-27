@@ -60,7 +60,7 @@ services:
     image: ${DOCKER_REGISTRY-}shoppingaggregator
     build:
       context: .
-      dockerfile: ApiGateways/Shopping.Aggregator/Shopping.Aggregator/Dockerfile
+      dockerfile: ApiGateways/Shopping.Aggregator/Dockerfile
 
   aspnetrunbasics:
     image: ${DOCKER_REGISTRY-}aspnetrunbasics
